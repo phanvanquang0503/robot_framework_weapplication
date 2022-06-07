@@ -1,0 +1,20 @@
+*** Settings ***
+Library    BuiltIn
+Library    Collections
+Library    DateTime
+Library    JSONLibrary
+Library    OperatingSystem
+Library    String
+Library    SSHLibrary
+Library    UtilitiesLibrary
+Library    Process
+Library    ExtendedDatabaseLibrary
+Library    InternalLibrary
+Library    SeleniumLibrary
+Resource    ${EXECDIR}/keywords/common/common.resource
+Variables    ${EXECDIR}/resources/webapplication/config.yaml
+Variables    ${EXECDIR}/resources/webapplication/formatfile.yaml
+Variables    ${EXECDIR}/resources/webapplication/patten.yaml
+Variables    ${EXECDIR}/resources/webapplication/datatype.yaml
+Resource    ${EXECDIR}/keywords/webapplication/app_database.resource
+Resource    ${EXECDIR}/keywords/webapplication/loginfuntion.resource

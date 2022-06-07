@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.2 on win32)" generated="20220607 07:42:18.473" rpa="false" schemaversion="2">
+<suite id="s1" name="Uis Test" source="D:\python-tutorial\robot_framework_weapplication\uis_test">
+<suite id="s1-s1" name="Webapplication" source="D:\python-tutorial\robot_framework_weapplication\uis_test\webapplication">
+<suite id="s1-s1-s1" name="Login Webaplication" source="D:\python-tutorial\robot_framework_weapplication\uis_test\webapplication\login_webaplication.robot">
+<test id="s1-s1-s1-t1" name="TC1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.tutorialspoint.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220607 07:42:18.941" level="TRACE">Arguments: [ 'https://www.tutorialspoint.com/' | 'chrome' ]</msg>
+<msg timestamp="20220607 07:42:18.941" level="INFO">Opening browser 'chrome' to base url 'https://www.tutorialspoint.com/'.</msg>
+<msg timestamp="20220607 07:42:20.160" level="DEBUG">POST http://localhost:64921/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20220607 07:42:20.160" level="DEBUG">Starting new HTTP connection (1): localhost:64921</msg>
+<msg timestamp="20220607 07:42:21.869" level="DEBUG">http://localhost:64921 "POST /session HTTP/1.1" 200 790</msg>
+<msg timestamp="20220607 07:42:21.869" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220607 07:42:21.869" level="DEBUG">POST http://localhost:64921/session/f533f68fde8000bc8f3263584c982467/timeouts {"script": 5000}</msg>
+<msg timestamp="20220607 07:42:21.871" level="DEBUG">http://localhost:64921 "POST /session/f533f68fde8000bc8f3263584c982467/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20220607 07:42:21.871" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220607 07:42:21.872" level="DEBUG">POST http://localhost:64921/session/f533f68fde8000bc8f3263584c982467/timeouts {"implicit": 0}</msg>
+<msg timestamp="20220607 07:42:21.873" level="DEBUG">http://localhost:64921 "POST /session/f533f68fde8000bc8f3263584c982467/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20220607 07:42:21.873" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220607 07:42:21.874" level="DEBUG">POST http://localhost:64921/session/f533f68fde8000bc8f3263584c982467/url {"url": "https://www.tutorialspoint.com/"}</msg>
+<msg timestamp="20220607 07:42:25.057" level="DEBUG">http://localhost:64921 "POST /session/f533f68fde8000bc8f3263584c982467/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20220607 07:42:25.058" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220607 07:42:25.058" level="DEBUG">Opened browser with session id f533f68fde8000bc8f3263584c982467.</msg>
+<msg timestamp="20220607 07:42:25.058" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20220607 07:42:18.941" endtime="20220607 07:42:25.058"/>
+</kw>
+<kw name="log content" library="loginfuntion">
+<msg timestamp="20220607 07:42:25.059" level="TRACE">Arguments: [  ]</msg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Quang</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220607 07:42:25.060" level="TRACE">Arguments: [ 'Quang' ]</msg>
+<msg timestamp="20220607 07:42:25.060" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220607 07:42:25.059" endtime="20220607 07:42:25.060"/>
+</kw>
+<msg timestamp="20220607 07:42:25.060" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220607 07:42:25.059" endtime="20220607 07:42:25.060"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20220607 07:42:25.062" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20220607 07:42:25.062" level="DEBUG">POST http://localhost:64921/session/f533f68fde8000bc8f3263584c982467/window/maximize {}</msg>
+<msg timestamp="20220607 07:42:25.274" level="DEBUG">http://localhost:64921 "POST /session/f533f68fde8000bc8f3263584c982467/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20220607 07:42:25.275" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220607 07:42:25.276" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220607 07:42:25.062" endtime="20220607 07:42:25.276"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20220607 07:42:25.277" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20220607 07:42:25.278" level="DEBUG">Closing browser with session id f533f68fde8000bc8f3263584c982467.</msg>
+<msg timestamp="20220607 07:42:25.278" level="DEBUG">DELETE http://localhost:64921/session/f533f68fde8000bc8f3263584c982467 {}</msg>
+<msg timestamp="20220607 07:42:25.709" level="DEBUG">http://localhost:64921 "DELETE /session/f533f68fde8000bc8f3263584c982467 HTTP/1.1" 200 14</msg>
+<msg timestamp="20220607 07:42:25.710" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220607 07:42:27.754" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220607 07:42:25.277" endtime="20220607 07:42:27.754"/>
+</kw>
+<tag>loginfuntion</tag>
+<tag>sprint_001</tag>
+<tag>test01</tag>
+<tag>webapplication</tag>
+<status status="PASS" starttime="20220607 07:42:18.940" endtime="20220607 07:42:27.755"/>
+</test>
+<status status="PASS" starttime="20220607 07:42:18.519" endtime="20220607 07:42:27.756"/>
+</suite>
+<status status="PASS" starttime="20220607 07:42:18.516" endtime="20220607 07:42:27.758"/>
+</suite>
+<status status="PASS" starttime="20220607 07:42:18.474" endtime="20220607 07:42:27.759"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">loginfuntion</stat>
+<stat pass="1" fail="0" skip="0">sprint_001</stat>
+<stat pass="1" fail="0" skip="0">test01</stat>
+<stat pass="1" fail="0" skip="0">webapplication</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Uis Test">Uis Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Webapplication">Uis Test.Webapplication</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Login Webaplication">Uis Test.Webapplication.Login Webaplication</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220607 07:42:18.549" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 5: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\python-tutorial\robot_framework_weapplication\libs\excel_import_library
+  D:\python-tutorial\robot_framework_weapplication\libs\extended_database_library
+  D:\python-tutorial\robot_framework_weapplication\libs\internal_library
+  D:\python-tutorial\robot_framework_weapplication\libs\utility_library
+  C:\Users\Quang\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\quang\appdata\local\programs\python\python38\python38.zip
+  c:\users\quang\appdata\local\programs\python\python38\DLLs
+  c:\users\quang\appdata\local\programs\python\python38\lib
+  c:\users\quang\appdata\local\programs\python\python38
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20220607 07:42:18.595" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 8: Importing library 'SSHLibrary' failed: ModuleNotFoundError: No module named 'SSHLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\python-tutorial\robot_framework_weapplication\libs\excel_import_library
+  D:\python-tutorial\robot_framework_weapplication\libs\extended_database_library
+  D:\python-tutorial\robot_framework_weapplication\libs\internal_library
+  D:\python-tutorial\robot_framework_weapplication\libs\utility_library
+  C:\Users\Quang\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\quang\appdata\local\programs\python\python38\python38.zip
+  c:\users\quang\appdata\local\programs\python\python38\DLLs
+  c:\users\quang\appdata\local\programs\python\python38\lib
+  c:\users\quang\appdata\local\programs\python\python38
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20220607 07:42:18.601" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 9: Importing library 'UtilitiesLibrary' failed: ModuleNotFoundError: No module named 'UtilitiesLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\python-tutorial\robot_framework_weapplication\libs\excel_import_library
+  D:\python-tutorial\robot_framework_weapplication\libs\extended_database_library
+  D:\python-tutorial\robot_framework_weapplication\libs\internal_library
+  D:\python-tutorial\robot_framework_weapplication\libs\utility_library
+  C:\Users\Quang\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\quang\appdata\local\programs\python\python38\python38.zip
+  c:\users\quang\appdata\local\programs\python\python38\DLLs
+  c:\users\quang\appdata\local\programs\python\python38\lib
+  c:\users\quang\appdata\local\programs\python\python38
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20220607 07:42:18.617" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 11: Importing library 'ExtendedDatabaseLibrary' failed: ModuleNotFoundError: No module named 'ExtendedDatabaseLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\python-tutorial\robot_framework_weapplication\libs\excel_import_library
+  D:\python-tutorial\robot_framework_weapplication\libs\extended_database_library
+  D:\python-tutorial\robot_framework_weapplication\libs\internal_library
+  D:\python-tutorial\robot_framework_weapplication\libs\utility_library
+  C:\Users\Quang\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\quang\appdata\local\programs\python\python38\python38.zip
+  c:\users\quang\appdata\local\programs\python\python38\DLLs
+  c:\users\quang\appdata\local\programs\python\python38\lib
+  c:\users\quang\appdata\local\programs\python\python38
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20220607 07:42:18.622" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 12: Importing library 'InternalLibrary' failed: ModuleNotFoundError: No module named 'InternalLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\python-tutorial\robot_framework_weapplication\libs\excel_import_library
+  D:\python-tutorial\robot_framework_weapplication\libs\extended_database_library
+  D:\python-tutorial\robot_framework_weapplication\libs\internal_library
+  D:\python-tutorial\robot_framework_weapplication\libs\utility_library
+  C:\Users\Quang\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\quang\appdata\local\programs\python\python38\python38.zip
+  c:\users\quang\appdata\local\programs\python\python38\DLLs
+  c:\users\quang\appdata\local\programs\python\python38\lib
+  c:\users\quang\appdata\local\programs\python\python38
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\quang\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20220607 07:42:18.924" level="WARN">Imported resource file 'D:\python-tutorial\robot_framework_weapplication\keywords\common\common.resource' is empty.</msg>
+<msg timestamp="20220607 07:42:18.926" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 15: Processing variable file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\config.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20220607 07:42:18.928" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 16: Processing variable file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\formatfile.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20220607 07:42:18.930" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 17: Processing variable file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\patten.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20220607 07:42:18.932" level="ERROR">Error in file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\init.resource' on line 18: Processing variable file 'D:\python-tutorial\robot_framework_weapplication\resources\webapplication\datatype.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20220607 07:42:18.933" level="WARN">Imported resource file 'D:\python-tutorial\robot_framework_weapplication\keywords\webapplication\app_database.resource' is empty.</msg>
+</errors>
+</robot>
